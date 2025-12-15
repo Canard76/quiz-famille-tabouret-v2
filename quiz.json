@@ -1,0 +1,738 @@
+{
+  "titre": "Quiz soirée amusante – Parents & Ados",
+  "description": "40 questions QCM pour jouer en famille. Chaque question a 4 propositions et 1 bonne réponse.",
+  "langue": "fr",
+  "version": "1.3",
+  "timer": {
+    "duration_seconds": 30,
+    "warning_last_seconds": 10,
+    "warning_color": "red",
+    "display": {
+      "type": "countdown",
+      "format": "SS",
+      "blink_on_warning": true
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "categorie": "Culture pop",
+      "question": "Quel format de vidéo est le plus fréquent sur TikTok ?",
+      "options": [
+        "Vertical",
+        "Horizontal",
+        "Carré",
+        "Panoramique"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 2,
+      "categorie": "Cuisine",
+      "question": "Quel ingrédient fait lever un gâteau ?",
+      "options": [
+        "Sucre",
+        "Levure chimique",
+        "Sel",
+        "Beurre"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 3,
+      "categorie": "Technologie",
+      "question": "Que signifie le ‘G’ dans 4G/5G ?",
+      "options": [
+        "Gigabyte",
+        "Génération",
+        "Global",
+        "Graphique"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 4,
+      "categorie": "Cinéma",
+      "question": "Quel studio a créé l’univers des Avengers ?",
+      "options": [
+        "DC Studios",
+        "Paramount",
+        "Marvel Studios",
+        "Pixar"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 5,
+      "categorie": "Musique",
+      "question": "Quel instrument compte généralement 6 cordes ?",
+      "options": [
+        "Guitare",
+        "Ukulélé",
+        "Basse",
+        "Violon"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 6,
+      "categorie": "Sport",
+      "question": "Dans quel sport marque-t-on des paniers ?",
+      "options": [
+        "Handball",
+        "Basketball",
+        "Football",
+        "Rugby"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 7,
+      "categorie": "Jeux vidéo",
+      "question": "Dans Minecraft, que fabrique-t-on avec 2 bâtons et 3 planches ?",
+      "options": [
+        "Épée",
+        "Pioche",
+        "Pelle",
+        "Hache"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 8,
+      "categorie": "Animaux",
+      "question": "Quel animal est le plus grand sur Terre ?",
+      "options": [
+        "Éléphant d’Afrique",
+        "Baleine bleue",
+        "Girafe",
+        "Orque"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 9,
+      "categorie": "Sciences",
+      "question": "De quoi sont principalement composées les étoiles ?",
+      "options": [
+        "Fer",
+        "Hydrogène et hélium",
+        "Oxygène",
+        "Carbone"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 10,
+      "categorie": "Langue",
+      "question": "Quel mot est un synonyme de ‘cool’ en argot ?",
+      "options": [
+        "Stylé",
+        "Poli",
+        "Vieux",
+        "Lent"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 11,
+      "categorie": "Histoire",
+      "question": "Quelle révolution a débuté en 1789 en France ?",
+      "options": [
+        "Industrielle",
+        "Scientifique",
+        "Française",
+        "Numérique"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 12,
+      "categorie": "Internet",
+      "question": "Que signifie ‘URL’ ?",
+      "options": [
+        "Universal Resource Link",
+        "Uniform Resource Locator",
+        "Unique Routing Level",
+        "Unified Remote Login"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 13,
+      "categorie": "Vie quotidienne",
+      "question": "Quel appareil mesure la température corporelle ?",
+      "options": [
+        "Baromètre",
+        "Thermomètre",
+        "Hygromètre",
+        "Altimètre"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 14,
+      "categorie": "Culture pop",
+      "question": "Quel univers met en scène ‘Hogwarts’ ?",
+      "options": [
+        "Le Seigneur des Anneaux",
+        "Harry Potter",
+        "Star Wars",
+        "Narnia"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 15,
+      "categorie": "Géographie",
+      "question": "Quelle est la capitale de l’Espagne ?",
+      "options": [
+        "Madrid",
+        "Barcelone",
+        "Séville",
+        "Valence"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 16,
+      "categorie": "Cinéma",
+      "question": "Qui réalise souvent des films d’animation chez Pixar ?",
+      "options": [
+        "Hayao Miyazaki",
+        "Brad Bird",
+        "Christopher Nolan",
+        "James Cameron"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 17,
+      "categorie": "Santé",
+      "question": "Quelle vitamine est principalement obtenue par l’exposition au soleil ?",
+      "options": [
+        "Vitamine A",
+        "Vitamine B12",
+        "Vitamine C",
+        "Vitamine D"
+      ],
+      "bonne_reponse": 3,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 18,
+      "categorie": "Musique",
+      "question": "Quel terme décrit une chanson qui reste en tête ?",
+      "options": [
+        "Banger",
+        "Ballade",
+        "Interlude",
+        "Instrumental"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 19,
+      "categorie": "Emoji",
+      "question": "Lequel de ces intitulés correspond à l'emoji 'larmes de joie' ?",
+      "options": [
+        "Rire aux larmes",
+        "Triste",
+        "En colère",
+        "Amoureux"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 20,
+      "categorie": "Sciences",
+      "question": "Quelle planète est connue pour ses anneaux visibles ?",
+      "options": [
+        "Mars",
+        "Jupiter",
+        "Saturne",
+        "Neptune"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 21,
+      "categorie": "Vie quotidienne",
+      "question": "Quel objet utilise-t-on pour charger un smartphone ?",
+      "options": [
+        "Câble USB",
+        "Écouteurs",
+        "Coque",
+        "Carte SIM"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 22,
+      "categorie": "Cuisine",
+      "question": "Quel plat est typiquement italien ?",
+      "options": [
+        "Sushi",
+        "Pizza",
+        "Tacos",
+        "Couscous"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 23,
+      "categorie": "Jeux vidéo",
+      "question": "Dans Mario Kart, quelle fonction a la carapace rouge ?",
+      "options": [
+        "Protection",
+        "Vitesse",
+        "Viser le coureur devant",
+        "Invisible"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 24,
+      "categorie": "Technologie",
+      "question": "Quel terme décrit un mot de passe unique envoyé par SMS ?",
+      "options": [
+        "Captcha",
+        "2FA / OTP",
+        "Cookie",
+        "VPN"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 25,
+      "categorie": "Culture générale",
+      "question": "Combien de continents compte-t-on généralement ?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 26,
+      "categorie": "Langue",
+      "question": "Quel est le pluriel de ‘cheval’ ?",
+      "options": [
+        "Chevals",
+        "Chevaux",
+        "Chevaus",
+        "Chevauxx"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 27,
+      "categorie": "Géographie",
+      "question": "Quel océan borde la côte ouest de la France ?",
+      "options": [
+        "Atlantique",
+        "Pacifique",
+        "Indien",
+        "Arctique"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 28,
+      "categorie": "Sport",
+      "question": "Quelle couleur est associée aux cartons d’avertissement au football ?",
+      "options": [
+        "Bleu",
+        "Jaune et rouge",
+        "Vert",
+        "Noir"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 29,
+      "categorie": "Cinéma",
+      "question": "Dans Star Wars, qui est le père de Luke ?",
+      "options": [
+        "Yoda",
+        "Obi-Wan",
+        "Anakin / Dark Vador",
+        "Han Solo"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 30,
+      "categorie": "Vie quotidienne",
+      "question": "Quelle appli sert principalement à discuter en groupes et familles ?",
+      "options": [
+        "WhatsApp",
+        "Maps",
+        "Spotify",
+        "Photos"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 31,
+      "categorie": "Sciences",
+      "question": "Quel gaz respirons-nous le plus dans l’air ?",
+      "options": [
+        "Oxygène",
+        "Hydrogène",
+        "Azote",
+        "Dioxyde de carbone"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 32,
+      "categorie": "Culture pop",
+      "question": "Quelle série met en scène des Demogorgons ?",
+      "options": [
+        "Stranger Things",
+        "The Witcher",
+        "The Mandalorian",
+        "Wednesday"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "moyen",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 33,
+      "categorie": "Musique",
+      "question": "Quel service est principalement utilisé pour écouter des chansons ?",
+      "options": [
+        "Spotify",
+        "Netflix",
+        "YouTube Kids",
+        "Twitch"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 34,
+      "categorie": "Technologie",
+      "question": "Que signifie ‘AI’ en anglais ?",
+      "options": [
+        "Artificial Intelligence",
+        "Active Internet",
+        "Advanced Input",
+        "Audio Interface"
+      ],
+      "bonne_reponse": 0,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 35,
+      "categorie": "Jeux & société",
+      "question": "Dans Uno, quelle couleur n’existe pas ?",
+      "options": [
+        "Rouge",
+        "Bleu",
+        "Violet",
+        "Vert"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 36,
+      "categorie": "Vie quotidienne",
+      "question": "Quelle boisson est généralement sans caféine ?",
+      "options": [
+        "Thé noir",
+        "Café décaféiné",
+        "Eau",
+        "Cola"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 37,
+      "categorie": "Géographie",
+      "question": "Quel pays a pour capitale Berlin ?",
+      "options": [
+        "Autriche",
+        "Suisse",
+        "Allemagne",
+        "Pays-Bas"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 38,
+      "categorie": "Sport",
+      "question": "Quel joueur utilise une raquette ?",
+      "options": [
+        "Footballeur",
+        "Tennisman",
+        "Rugbyman",
+        "Handballeur"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 39,
+      "categorie": "Sciences",
+      "question": "Quel organe pompe le sang dans le corps ?",
+      "options": [
+        "Foie",
+        "Poumons",
+        "Cœur",
+        "Estomac"
+      ],
+      "bonne_reponse": 2,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    },
+    {
+      "id": 40,
+      "categorie": "Culture générale",
+      "question": "Quel jour suit directement le vendredi ?",
+      "options": [
+        "Jeudi",
+        "Samedi",
+        "Dimanche",
+        "Lundi"
+      ],
+      "bonne_reponse": 1,
+      "difficulte": "facile",
+      "timer": {
+        "duration_seconds": 30,
+        "warning_last_seconds": 10,
+        "warning_color": "red"
+      }
+    }
+  ]
+}
