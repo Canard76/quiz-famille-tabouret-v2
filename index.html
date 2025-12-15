@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Familial — Pop & Cuisine (40 questions)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="titles">
+      <h1 id="quiz-title">Quiz Familial — Pop & Cuisine (40 questions)</h1>
+      <p id="intro">20 QCM + 20 Vrai/Faux. 45 secondes par question, passage en rouge à 5 s. Cadeau surprise selon votre score !</p>
+    </div>
+  </header>
+  <main>
+    <section id="start-screen" class="card">
+      <div class="field" id="name-field">
+        <label for="playerName">Votre prénom</label>
+        <input type="text" id="playerName" placeholder="Ex: Alex" />
+      </div>
+      <button id="startBtn" class="primary">Commencer le quiz</button>
+    </section>
+
+    <section id="quiz-screen" class="card hidden">
+      <div class="quiz-header">
+        <div id="progress">Question <span id="qIndex">1</span>/<span id="qTotal">0</span></div>
+        <div id="score">Score: <span id="scoreVal">0</span></div>
+      </div>
+      <div id="timerWrap">
+        <div id="timerLabel">Temps restant: <span id="timeLeft">45</span>s</div>
+        <div class="timer-bar"><div id="timerFill"></div></div>
+      </div>
+      <div id="question" class="question"></div>
+      <div id="choices" class="choices"></div>
+      <div class="actions">
+        <button id="nextBtn" class="primary" disabled>Valider et continuer</button>
+      </div>
+    </section>
+
+    <section id="result-screen" class="card hidden">
+      <h2>Résultat</h2>
+      <p id="finalName"></p>
+      <p>Score total: <strong id="finalScore">0</strong></p>
+      <p id="giftTier">Cadeau surprise: <strong id="giftLabel">—</strong></p>
+      <p id="claimCodeWrap">Code de validation: <code id="claimCode">—</code></p>
+      <div class="actions">
+        <button id="restartBtn" class="secondary">Rejouer</button>
+        <button id="printBtn" class="primary">Imprimer</button>
+      </div>
+      <details>
+        <summary>Voir vos réponses</summary>
+        <div id="review"></div>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <small>© 2025 — Quiz familial publié via GitHub Pages.</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

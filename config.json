@@ -1,0 +1,20 @@
+{
+  "quizTitle": "Quiz Familial — Pop & Cuisine (40 questions)",
+  "requireName": true,
+  "giftTiers": [
+    {
+      "minScore": 0,
+      "label": "Niveau Bronze"
+    },
+    {
+      "minScore": 200,
+      "label": "Niveau Argent"
+    },
+    {
+      "minScore": 320,
+      "label": "Niveau Or"
+    }
+  ],
+  "pointsPerQuestionDefault": 10,
+  "timePerQuestionSeconds": 45
+}

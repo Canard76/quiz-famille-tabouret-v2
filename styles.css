@@ -1,0 +1,26 @@
+:root { --primary:#E91E63; --accent:#FF9800; --bg:#f6f7fb; --text:#1f2937; --card:#ffffff; --success:#22c55e; --danger:#ef4444; }
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:24px} header h1{margin:0;font-size:1.8rem} header p{margin-top:6px;color:#555}
+main{max-width:900px;margin:0 auto;padding:16px}
+.card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);padding:20px;margin-bottom:20px}
+.hidden{display:none}
+.field label{font-weight:600} input[type=text]{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px}
+.primary{background:var(--primary);color:#fff;border:none;padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:600}
+.primary:disabled{opacity:.6;cursor:not-allowed}
+.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary);padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:600}
+.quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.question{font-size:1.2rem;font-weight:600;margin:10px 0 12px}
+.choices{display:grid;gap:8px}
+.choice{border:1px solid #ddd;border-radius:10px;padding:10px;cursor:pointer;background:#fafafa}
+.choice.selected{border-color:var(--primary);background:#ffe4ee}
+.choice.correct{border-color:var(--success);background:#ecfdf5}
+.choice.wrong{border-color:var(--danger);background:#fef2f2}
+.actions{margin-top:16px;display:flex;gap:8px}
+#timerWrap{margin:4px 0 12px}
+#timerLabel{font-weight:600}
+#timerLabel.danger{color:var(--danger)}
+.timer-bar{height:8px;background:#eee;border-radius:999px;overflow:hidden}
+#timerFill{height:100%;width:100%;background:var(--accent);transition:width .2s linear, background-color .2s linear}
+#timerFill.danger{background:var(--danger)}
+#review{margin-top:10px} #review .review-item{border-top:1px dashed #ddd;padding-top:10px;margin-top:10px}
