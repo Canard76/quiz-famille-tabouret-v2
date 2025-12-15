@@ -1,63 +1,130 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz Familial — Pop & Cuisine (40 questions)</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Quiz soirée – Parents & Ados</title>
+  <style>
+    :root {
+      --accent: #1f7aec;
+      --warn: #e53935;
+      --ok: #1b5e20;
+    }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin: 0; background: #f7f7fb; color: #222; }
+    header { background: white; border-bottom: 1px solid #e6e6ef; padding: 16px 24px; position: sticky; top:0; }
+    h1 { font-size: 1.25rem; margin: 0; }
+    main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    .card { background: white; border: 1px solid #e6e6ef; border-radius: 12px; padding: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .meta { color: #555; font-size: .9rem; margin-bottom: 8px; }
+    .question { font-weight: 700; margin: 8px 0 12px; }
+    .options { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .options button { text-align: left; border: 1px solid #dadcec; border-radius: 10px; padding: 12px; background: #fafbff; cursor: pointer; }
+    .options button:hover { border-color: var(--accent); }
+    .options button.correct { border-color: var(--ok); background: #e9f7ec; }
+    .options button.wrong { border-color: var(--warn); background: #fdeaea; }
+    .controls { display:flex; gap:8px; margin-top: 12px; }
+    .controls button { border: none; background: var(--accent); color: white; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+    .controls button.secondary { background: #eceff7; color: #0b1b38; }
+    .timer { font-weight: 700; font-size: 1.2rem; padding: 6px 10px; border-radius: 8px; display:inline-block; background: #eef6ff; color: #0b1b38; }
+    .timer.warn { background: #ffe9e9; color: var(--warn); animation: blink .9s linear infinite; }
+    @keyframes blink { 50% { opacity: .35; } }
+    .score { font-weight: 700; }
+    footer { color: #666; text-align:center; padding: 24px; }
+  </style>
 </head>
 <body>
   <header>
-    <div class="titles">
-      <img id="logo" src="logo.png" alt="Logo du quiz" />
-      <h1 id="quiz-title">Quiz Familial — Pop & Cuisine (40 questions)</h1>
-      <p id="intro">20 QCM + 20 Vrai/Faux. 45 secondes par question, passage en rouge à 5 s. Cadeau surprise selon votre score !</p>
-    </div>
+    <h1>Quiz soirée – Parents & Ados</h1>
+    <div id="info" class="meta"></div>
   </header>
   <main>
-    <section id="start-screen" class="card">
-      <div class="field" id="name-field">
-        <label for="playerName">Votre prénom</label>
-        <input type="text" id="playerName" placeholder="Ex: Alex" />
-      </div>
-      <button id="startBtn" class="primary">Commencer le quiz</button>
-    </section>
-
-    <section id="quiz-screen" class="card hidden">
-      <div class="quiz-header">
-        <div id="progress">Question <span id="qIndex">1</span>/<span id="qTotal">0</span></div>
-        <div id="score">Score: <span id="scoreVal">0</span></div>
-      </div>
-      <div id="timerWrap">
-        <div id="timerLabel">Temps restant: <span id="timeLeft">45</span>s</div>
-        <div class="timer-bar"><div id="timerFill"></div></div>
-      </div>
+    <div class="card">
+      <div id="status" class="meta"></div>
+      <div id="timer" class="timer">--</div>
       <div id="question" class="question"></div>
-      <div id="choices" class="choices"></div>
-      <div class="actions">
-        <button id="nextBtn" class="primary" disabled>Valider et continuer</button>
+      <div id="options" class="options"></div>
+      <div class="controls">
+        <button id="nextBtn">Question suivante</button>
+        <button id="resetBtn" class="secondary">Réinitialiser</button>
       </div>
-    </section>
-
-    <section id="result-screen" class="card hidden">
-      <h2>Résultat</h2>
-      <p id="finalName"></p>
-      <p>Score total: <strong id="finalScore">0</strong></p>
-      <p id="giftTier">Cadeau surprise: <strong id="giftLabel">—</strong></p>
-      <p id="claimCodeWrap">Code de validation: <code id="claimCode">—</code></p>
-      <div class="actions">
-        <button id="restartBtn" class="secondary">Rejouer</button>
-        <button id="printBtn" class="primary">Imprimer</button>
-      </div>
-      <details>
-        <summary>Voir vos réponses</summary>
-        <div id="review"></div>
-      </details>
-    </section>
+      <p class="meta"><span class="score" id="score">Score: 0</span></p>
+    </div>
   </main>
   <footer>
-    <small>© 2025 — Quiz familial publié via GitHub Pages.</small>
+    Hébergé via GitHub Pages. Fichier JSON chargé : <code>quiz.json</code>
   </footer>
-  <script src="app.js"></script>
+
+<script>
+let data = null;
+let i = 0, score = 0, timerId = null, t = 0;
+
+async function load() {
+  const res = await fetch('quiz.json');
+  data = await res.json();
+  document.getElementById('info').textContent = `${data.titre} — ${data.description}`;
+  i = 0; score = 0;
+  showQuestion();
+}
+
+function startTimer(cfg) {
+  stopTimer();
+  t = cfg.duration_seconds;
+  const timerEl = document.getElementById('timer');
+  const warnAt = cfg.warning_last_seconds;
+  const warnColor = cfg.warning_color || 'red';
+  timerEl.classList.remove('warn');
+  timerEl.style.color = '';
+  timerEl.textContent = t;
+  timerId = setInterval(() => {
+    t--; timerEl.textContent = t;
+    if (t <= warnAt) {
+      timerEl.classList.add('warn');
+      timerEl.style.color = warnColor;
+    }
+    if (t <= 0) {
+      stopTimer();
+      for (const b of document.querySelectorAll('#options button')) b.disabled = true;
+    }
+  }, 1000);
+}
+
+function stopTimer(){ if (timerId) { clearInterval(timerId); timerId = null; } }
+
+function showQuestion() {
+  const q = data.questions[i];
+  const status = document.getElementById('status');
+  status.textContent = `Question ${i+1} / ${data.questions.length} — Catégorie: ${q.categorie} — Difficulté: ${q.difficulte}`;
+  document.getElementById('question').textContent = q.question;
+
+  const optionsDiv = document.getElementById('options');
+  optionsDiv.innerHTML = '';
+  q.options.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.textContent = opt;
+    btn.addEventListener('click', () => answer(idx, q.bonne_reponse, btn));
+    optionsDiv.appendChild(btn);
+  });
+
+  startTimer(q.timer || data.timer);
+}
+
+function answer(choice, correctIdx, btn) {
+  const buttons = document.querySelectorAll('#options button');
+  buttons.forEach(b => b.disabled = true);
+  stopTimer();
+  buttons.forEach((b, idx) => { if (idx === correctIdx) b.classList.add('correct'); });
+  if (choice === correctIdx) { btn.classList.add('correct'); score++; } else { btn.classList.add('wrong'); }
+  document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function next() { i = (i + 1) % data.questions.length; showQuestion(); }
+
+function reset() { i = 0; score = 0; document.getElementById('score').textContent = `Score: ${score}`; showQuestion(); }
+
+document.getElementById('nextBtn').document.getElementById('nextBtn').addEventListener('click', next);
+document.getElementById('resetBtn').addEventListener('click', reset);
+
+load();
+</script>
 </body>
-</html>
